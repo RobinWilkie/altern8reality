@@ -1,0 +1,47 @@
+                            
+/* TEAM */
+
+                            
+Your title: Robin Wilkie
+
+                            
+Site: altern8reality
+
+                            
+Twitter: @robinwilkie
+
+                            
+Location: Glasgow, Scotland
+
+                         
+                 
+                        [...]
+						
+
+							
+/* THANKS */
+
+							
+Name: Dave Ball
+
+Name: awe.js (https://github.com/awe-media/awe.js)
+
+						
+                 
+                        [...]
+                        
+
+                            
+/* SITE */
+
+                            
+Last update: 16/05/17 
+
+                            
+Standards: HTML5, CSS3, PHP..
+
+                            
+Components: jQuery, jQuery mobile, Awe.js, Google Maps API, PHPMailer etc.
+
+                            
+Software: Jetbrains Webstorm, Brackets, Adobe Photoshop, Adobe Illustrator

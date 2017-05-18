@@ -1,0 +1,482 @@
+/* Robin Wilkie
+HND Interactive Media 2016/17
+Altern8reality AR Game */
+
+
+/* stylesheet for Altern8reality Augmented Reality Game */
+
+
+/* FONTS
+font-family: 'Raleway', sans-serif;
+font-family: 'Ubuntu', sans-serif; */
+
+
+/* COLOURS
+Black #0B0B0B
+Yellow #FDE43F
+Grey #878787
+White #FFFFFF */
+
+
+/* '!important' used to overide JQuery Mobile styling */
+
+html {
+    height: 100% !important;
+}
+
+body {
+    height: 100% !important;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Raleway', sans-serif !important;
+    text-shadow: none !important;
+    text-align: center;
+}
+
+p {
+    font-family: 'Ubuntu', sans-serif !important;
+    text-shadow: none !important;
+}
+
+a {
+    outline: none !important;
+}
+
+span {
+    color: #FDE43F;
+}
+
+.content {
+    height: 100% !important;
+    background-color: #0B0B0B !important;
+    color: #FFFFFF !important;
+}
+
+.ui-content {
+    background-color: #0B0B0B;
+    height: 85vh;
+    color: #FFFFFF;
+}
+
+
+/* styling for headers */
+
+.headerOne,
+.headerTwo,
+.headerThree {
+    background-color: #0B0B0B;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* styling for slideout menu */
+
+.slideOut {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #0B0B0B;
+    color: #FFFFFF;
+    outline: none;
+}
+
+.slideOut a {
+    text-shadow: none;
+    text-decoration: none;
+    outline: none;
+    padding: 5%;
+    background-color: #FDE43F;
+    color: #0B0B0B;
+    margin-bottom: 5%;
+}
+
+#myPanel a {
+    color: #0B0B0B;
+    margin-bottom: 5%;
+}
+
+#myPanel a:hover {
+    color: #878787;
+}
+
+
+/* styling for buttons */
+
+.primaryBtn {
+    background-color: #FDE43F !important;
+    font-family: 'Ubuntu', sans-serif !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+    outline: none !important;
+    border: none !important;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.primaryBtn:hover {
+    transform: scale(1.02);
+}
+
+.secondaryBtn {
+    background-color: #0B0B0B !important;
+    color: #FDE43F !important;
+    border: 2px solid #FDE43F !important;
+    font-family: 'Ubuntu', sans-serif !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+    outline: none !important;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.secondaryBtn:hover {
+    transform: scale(1.02);
+}
+
+button:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+
+/* -------------------- Styles for INDEX page -------------------- */
+
+
+/* set styles for spinning cube animation */
+
+.cubewrap {
+    margin-top: 10vh;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+}
+
+.cube {
+    margin: auto;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 15s infinite linear;
+}
+
+.cube>div {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    opacity: 0.85;
+    background-color: #0B0B0B;
+    border: solid 1px #eeeeee;
+    color: #FDE43F;
+    text-align: center;
+    align-items: center;
+    transition: transform 0.2s ease-in;
+}
+
+.cube h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.front {
+    transform: translateZ(100px);
+}
+
+.back {
+    transform: translateZ(-100px) rotateY(180deg);
+}
+
+.top {
+    transform: rotateX(-270deg) translateY(-100px);
+    transform-origin: top center;
+}
+
+.bottom {
+    transform: rotateX(270deg) translateY(100px);
+    transform-origin: bottom center;
+}
+
+.left {
+    transform: rotateY(270deg) translateX(-100px);
+    transform-origin: center left;
+}
+
+.right {
+    transform: rotateY(-270deg) translateX(100px);
+    transform-origin: top right;
+}
+
+
+/* rotating animation for cube */
+
+@keyframes rotate {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+span {
+    color: #FDE43F;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+
+/* glowing animation for number 8 on cube sides */
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #000, 0 0 20px #FDE43F, 0 0 30px #FDE43F, 0 0 40px #FDE43F, 0 0 70px #FDE43F, 0 0 80px #FDE43F, 0 0 100px #FDE43F, 0 0 150px #FDE43F;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #FDE43F, 0 0 15px #FDE43F, 0 0 20px #FDE43F, 0 0 35px #FDE43F, 0 0 40px #FDE43F, 0 0 50px #FDE43F, 0 0 75px #FDE43F;
+    }
+}
+
+#indexOPtions {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+}
+
+
+/* -------------------- Styles for REGISTER page -------------------- */
+
+#Register {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    text-align: center;
+}
+
+#Register hr {
+    width: 80%;
+    margin: 8%;
+}
+
+.registerSlideOut {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #0B0B0B;
+    color: #FFFFFF;
+    outline: none;
+}
+
+#registerPanel a {
+    color: #FDE43F;
+    text-shadow: none;
+    text-decoration: none;
+    outline: none;
+    margin: 5%;
+}
+
+#registerPanel a:hover {
+    color: #878787;
+}
+
+
+/* -------------------- Styles for LOGIN page -------------------- */
+
+#SignIn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    text-align: center;
+}
+
+#SignIn hr {
+    width: 80%;
+    margin-top: 8%;
+}
+
+#SignIn a {
+    color: #FDE43F;
+}
+
+#SignIn label {
+    width: 35%;
+}
+
+
+/* -------------------- Styles for PASSWORD RECOVERY page -------------------- */
+
+#passwordRecovery {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+}
+
+#passwordRecovery h1 {
+    margin-bottom: 15%;
+}
+
+
+/* -------------------- Styles for OPTIONS page -------------------- */
+
+#optionsMenu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+}
+
+.greeting {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.greeting a {
+    color: #FDE43F !important;
+}
+
+
+/* -------------------- Styles for HOW TO PLAY page -------------------- */
+
+#howToPlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    text-align: center;
+}
+
+#howToPlay img {
+    height: 27vh;
+}
+
+
+/* -------------------- Styles for ABOUT page -------------------- */
+
+#aboutGame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    text-align: center;
+}
+
+#aboutGame a {
+    color: #FDE43F;
+}
+
+
+/* -------------------- Styles for SCOREBOARD page -------------------- */
+
+#scoreboard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+}
+
+#scoreboard table {
+    width: 70vw;
+    text-align: center;
+    border: 3px solid #FDE43F;
+    padding: 5px;
+}
+
+#scoreboard th {
+    padding-bottom: 10px;
+}
+
+
+/* -------------------- Styles for ADMIN page -------------------- */
+
+#admin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+}
+
+
+/* -------------------- Styles for PROFILE page -------------------- */
+
+#profileDetails {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#profileDetails a {
+    color: #FDE43F;
+    text-shadow: none;
+    text-decoration: none;
+    outline: none;
+}
+
+
+/* -------------------- Styles for TREASURE ITEMS page -------------------- */
+
+#treasureTable img {
+    width: 10vw;
+}
+
+
+/* -------------------- Styles for centre wrap accross muliple pages -------------------- */
+
+.centreWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+}
